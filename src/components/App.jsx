@@ -10,15 +10,15 @@ function App() {
   const [feedBackData, setFeedBackdata] = useState(() => {
     const savedFeedback = window.localStorage.getItem("feedbackState");
 
-    if (savedFeedback !== "undefined") {
+    if (savedFeedback !== "undefined" && savedFeedback !== null) {
       return JSON.parse(savedFeedback);
     }
 
-    return ({
+    return {
       good: 0,
       neutral: 0,
       bad: 0,
-    });
+    };
   });
 
   useEffect(() => {
