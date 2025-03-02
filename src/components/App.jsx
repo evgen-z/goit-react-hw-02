@@ -45,6 +45,7 @@ function App() {
   const positiveFeedback = Math.round(
     (feedBackData.good / totalFeedback) * 100
   );
+  
   return (
     <div>
       <Description />
